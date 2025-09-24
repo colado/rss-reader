@@ -1,0 +1,54 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# TypeScript
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# Env / secrets
+.env
+.env.*.local
+.env.local
+.envrc
+
+# Coverage / logs
+coverage/
+.nyc_output/
+logs/
+*.log
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.swp
+*.swo
+
+# Test snapshots
+__snapshots__/
+
+# Misc caches
+.cache/
+.tmp/
+temp/
+tmp/
+
+# Database / local data (if any)
+*.sqlite
+*.sqlite-journal
+
+# Lockfile backups
+*.orig
