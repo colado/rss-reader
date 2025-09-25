@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { Client } from "pg";
+import { client } from "../db/client";
 
 // Make __dirname work whether you're using ESM ("type": "module") or not
 const __filename = fileURLToPath(import.meta.url);
@@ -17,8 +17,6 @@ async function main() {
     process.exit(1);
   }
 
-  const client = new Client({ connectionString: url });
-  await client.connect();
   await client.query(sql);
   await client.end();
   console.log("Migration ran ✅");

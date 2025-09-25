@@ -1,4 +1,4 @@
-import { Client } from "pg";
+import { client } from "../db/client";
 
 // Later to be imported from OPML files
 const seeds = [
@@ -8,8 +8,6 @@ const seeds = [
 ];
 
 async function main() {
-  const client = new Client({ connectionString: process.env.DATABASE_URL });
-  await client.connect();
   for (const url of seeds) {
     await client.query(
       `INSERT INTO feeds (feed_url) VALUES ($1)

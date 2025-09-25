@@ -1,9 +1,7 @@
-import { Client } from "pg";
+import { client } from "../db/client";
 import { fetchAndIngestOnce } from "../ingest";
 
 export async function runScheduler() {
-  const client = new Client({ connectionString: process.env.DATABASE_URL });
-  await client.connect();
   while (true) {
     const { rows } = await client.query(
       `SELECT * FROM feeds
