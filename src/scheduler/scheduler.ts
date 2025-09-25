@@ -13,7 +13,7 @@ export async function runScheduler() {
     );
 
     if (rows.length === 0) {
-      await sleep(2000); // nothing due; nap 2s
+      await sleep(2000);
       continue;
     }
 
