@@ -1,3 +1,4 @@
+// Needs more context - why? how?
 export class HostLimiter {
   constructor(private maxPerHost = 3) {}
   private inFlight = new Map<string, number>();

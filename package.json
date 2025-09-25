@@ -19,6 +19,7 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
+    "fast-xml-parser": "^5.2.5",
     "iconv-lite": "^0.7.0",
     "pg": "^8.16.3",
     "pino": "^9.11.0",
